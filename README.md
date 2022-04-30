@@ -22,5 +22,32 @@ Say a robot starts at {7, 3} facing north.
 Then running this stream of instructions should leave it at {9, 4} facing west.
 
 ## mix test
+Excluding tags: [:pending]
+
+RoboSimTest [test/robosim_test.exs]
+  * test 5. Rotating move Left (excluded) [L#55]
+  * test 6. Forwarding move Advance (excluded) [L#74]
+  * test 2. Robotic with a valid parameters (excluded) [L#11]
+  * test 3. Robotic with a invalid parameters (excluded) [L#30]
+  * test 7. Combination rotating and forwarding instructions (excluded) [L#93]
+  * test 4. Rotating move Right (excluded) [L#36]
+  * test 1. Robotic initialize (0.00ms) [L#4]
+
+Finished in 0.06 seconds (0.00s async, 0.06s sync)
+7 tests, 0 failures, 6 excluded
+
 
 ## mix test --include pending
+Including tags: [:pending]
+
+RoboSimTest [test/robosim_test.exs]
+  * test 4. Rotating move Right (2.6ms) [L#36]
+  * test 3. Robotic with a invalid parameters (0.00ms) [L#30]
+  * test 5. Rotating move Left (0.00ms) [L#55]
+  * test 1. Robotic initialize (0.00ms) [L#4]
+  * test 2. Robotic with a valid parameters (0.00ms) [L#11]
+  * test 7. Combination rotating and forwarding instructions (0.01ms) [L#93]
+  * test 6. Forwarding move Advance (0.00ms) [L#74]
+
+Finished in 0.06 seconds (0.00s async, 0.06s sync)
+7 tests, 0 failures
